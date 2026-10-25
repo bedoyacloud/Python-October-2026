@@ -1,10 +1,20 @@
+import logging
 import os
 import subprocess
+
+logging.basicConfig(
+    filename="finanzas.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    encoding="utf-8",
+)
 
 def clear_screen():
     subprocess.run('cls' if os.name == 'nt' else 'clear')
 
 gastos = []
+
+logging.info("Aplicación iniciada")
 
 while True:
     clear_screen()
@@ -59,3 +69,5 @@ while True:
         clear_screen()
         print("Saliendo del programa...")
         break
+
+logging.info("Aplicación detenida")
