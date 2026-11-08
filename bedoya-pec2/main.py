@@ -14,10 +14,15 @@ def mostrar_menu() -> None:
     print("3. Buscar tarea")
     print("4. Salir")
 
+def mostrar_bienvenida() -> None:
+    """Muestra un mensaje de bienvenida al iniciar el programa."""
+    print(Fore.MAGENTA + Style.BRIGHT + "¡Bienvenido al Gestor de Tareas!")
+    print(Fore.MAGENTA + "Organiza tus pendientes de forma simple.\n")
 
 def main() -> None:
     """Ejecuta el bucle principal del programa."""
     tareas = []
+    mostrar_bienvenida()
 
     while True:
         mostrar_menu()
@@ -63,3 +68,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
